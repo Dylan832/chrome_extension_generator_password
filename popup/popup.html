@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">Générateur de mots de passe</h1>
+    </header>
+
+    <main class="container">
+      <div class="generated-block">
+        <div id="generated-wrapper"></div>
+        <div class="action-buttons">
+          <button type="button" id="generator" class="btn">
+            <i class="fas fa-sync"></i>
+          </button>
+          <button type="button" id="copy" class="btn">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- <input type="text" id="password" class="password" readonly /> -->
+
+      <input type="number" id="length" min="6" max="50" value="12" />
+      <div>
+        <input
+          type="radio"
+          id="passwordType"
+          name="type"
+          value="password"
+          checked
+        />
+        <label for="passwordType">Mot de passe</label>
+        <input
+          type="radio"
+          id="passphraseType"
+          name="type"
+          value="passphrase"
+        />
+        <label for="passphraseType">Phrase de passe</label>
+      </div>
+
+      <div id="copiedPopup" class="copied-popup">Mot de passe copié</div>
+
+      <div id="onlyPassword">
+        <div>
+          <input type="checkbox" id="letters" checked />
+          <label for="letters">Lettres</label>
+          <input type="checkbox" id="numbers" checked />
+          <label for="numbers">Chiffres</label>
+          <input type="checkbox" id="specials" checked />
+          <label for="specials">Caractères spéciaux</label>
+        </div>
+
+        <div>
+          <label for="minNumbers">Min. chiffres :</label>
+          <input type="number" id="minNumbers" min="0" value="0" />
+          <label for="minSpecials">Min. caractères spéciaux :</label>
+          <input type="number" id="minSpecials" min="0" value="0" />
+        </div>
+      </div>
+    </main>
+    <script src="./popup.js"></script>
+  </body>
+</html>

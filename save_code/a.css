@@ -1,0 +1,119 @@
+* {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* color: #cc0000; */
+}
+
+html {
+  width: 250px;
+  height: 250px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+}
+
+.title {
+  color: #333;
+  font-size: small;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+}
+
+.password {
+  margin-top: 20px;
+  text-align: center;
+  border: none;
+  background-color: #ddd;
+  padding: 10px;
+  width: 200px;
+}
+/* ... vos autres styles CSS ... */
+
+.copied-popup {
+  visibility: hidden;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  width: 100%;
+}
+
+.copied-popup.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

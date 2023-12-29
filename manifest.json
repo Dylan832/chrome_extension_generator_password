@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "version": "0.1",
+    "name": "My Password Generator",
+    "description": "Generate random password",
+    "icons": {
+        "128": "images/icon-pw.png"
+    },
+    "background": {},
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "images/icon-pw.png",
+        "default_title": "My Password Generator"
+    },
+    "permissions": []
+}
