@@ -10,6 +10,10 @@ Il s'agit d'une extension Chrome qui offre les fonctionnalités suivantes :
 
 Pour installer cette extension, veuillez suivre les étapes ci-dessous :
 
-1. Téléchargez l'extension.
+1. Téléchargez l'extension depuis la section 
+[Releases](https://github.com/Dylan832/chrome_extension_generator_password/releases) 
+sur GitHub ou directement via ce
+[lien](https://gitlab.com/Dylan832/chrome_extension_generator_password/-/archive/main/chrome_extension_generator_password-main.zip).
+
 2. Ouvrez votre navigateur Chrome et activez le mode développeur.
-3. Sélectionnez l'option "Ajouter une extension non empaquetée" et choisissez le dossier contenant l'extension téléchargée.
+3. Sélectionnez l'option "Charger l'extension non empaquetée" et choisissez le dossier contenant l'extension téléchargée.
