@@ -4,12 +4,12 @@
     "name": "My Password Generator",
     "description": "Generate random password",
     "icons": {
-        "128": "images/icon-pw.png"
+        "128": "images/icon-128.png"
     },
     "background": {},
     "action": {
         "default_popup": "popup/popup.html",
-        "default_icon": "images/icon-pw.png",
+        "default_icon": "images/icon-128.png",
         "default_title": "My Password Generator"
     },
     "permissions": []

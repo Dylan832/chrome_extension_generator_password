@@ -1,7 +1,7 @@
 html {
   width: 375px !important;
-  height: 600px !important;
-  overflow: hidden;
+  /* height: 600px !important; */
+  /* overflow: hidden; */
 }
 body {
   font-family: Arial, sans-serif;
@@ -82,4 +82,54 @@ body {
 
 .copied-popup.show {
   display: block;
+}
+
+.password-numbers {
+  color: blue;
+}
+.password-specials {
+  color: red;
+}
+
+.length-block {
+  margin: 3px 0 3px 5px;
+}
+
+.box-block {
+  /* background-color: #f0f0f0; */
+  border-color: #ddd;
+}
+.box-content {
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+  position: relative;
+  z-index: 1;
+  
+  border-radius: 6px;
+
+  background-color: #f0f0f0;
+
+  padding: 10px 10px;
+  margin: 3px 5px;
+}
+
+.box-content label {
+  font-size: 12px;
+  display: block;
+  width: 100%;
+}
+.box-content input {
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+.box-content input[type="number"] {
+  max-width: 50px;
+  text-align: right;
+}
+
+.box-content input:not([type="checkbox"]):not([type="radio"]) {
+  border: none;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
