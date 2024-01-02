@@ -12,7 +12,7 @@ const specialsCheckbox = document.getElementById("specials");
 const minNumbersInput = document.getElementById("minNumbers");
 const minSpecialsInput = document.getElementById("minSpecials");
 
-const onlyPassword = document.getElementById("onlyPassword");
+const onlyPassword = document.getElementsByClassName("onlyPassword");
 
 // A l'ouverture de l'extension je génère un mot de passe
 generatePassword(lengthInput.value);
@@ -122,9 +122,11 @@ document.getElementById("passwordType").addEventListener("change", function () {
   if (this.checked) {
     lengthInput.value = 12;
     lengthInput.min = 6;
-    // Affichez les éléments "onlyPassword"
 
-    onlyPassword.style.display = "block";
+    // Affichez les éléments "onlyPassword"
+    for (let i = 0; i < onlyPassword.length; i++) {
+      onlyPassword[i].style.display = "flex";
+    }
 
     generatePassword(lengthInput.value);
   }
@@ -137,9 +139,9 @@ document
       lengthInput.value = 3;
       lengthInput.min = 3;
       // Cachez les éléments "onlyPassword"
-
-      onlyPassword.style.display = "none";
-
+      for (let i = 0; i < onlyPassword.length; i++) {
+        onlyPassword[i].style.display = "none";
+      }
       generatePassphrase(lengthInput.value);
     }
   });
