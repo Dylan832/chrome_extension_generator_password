@@ -4,6 +4,7 @@
 const lengthInput = document.getElementById("length");
 const passwordInput = document.getElementById("password");
 const copiedPopup = document.getElementById("copiedPopup");
+const errorPopup = document.getElementById("errorPopup");
 
 const lettersCheckbox = document.getElementById("letters");
 const numbersCheckbox = document.getElementById("numbers");
@@ -46,9 +47,11 @@ function generatePassword(length) {
 
   // Vérifiez que la somme des minimums ne dépasse pas la longueur totale
   if (parseInt(minNumbers) + parseInt(minSpecials) > length) {
-    alert(
-      "La somme des minimums ne peut pas dépasser la longueur totale du mot de passe !"
-    );
+    errorPopup.classList.add("show");
+    setTimeout(function () {
+      errorPopup.classList.remove("show");
+    }, 2000);
+
     return;
   }
 
@@ -122,6 +125,7 @@ document.getElementById("passwordType").addEventListener("change", function () {
   if (this.checked) {
     lengthInput.value = 12;
     lengthInput.min = 6;
+    lengthInput.max = 50;
 
     // Affichez les éléments "onlyPassword"
     for (let i = 0; i < onlyPassword.length; i++) {
@@ -138,6 +142,7 @@ document
     if (this.checked) {
       lengthInput.value = 3;
       lengthInput.min = 3;
+      lengthInput.max = 20;
       // Cachez les éléments "onlyPassword"
       for (let i = 0; i < onlyPassword.length; i++) {
         onlyPassword[i].style.display = "none";
@@ -155,10 +160,18 @@ document.getElementById("generator").addEventListener("click", function () {
       length = 6;
       lengthInput.value = length;
     }
+    if (length > 50) {
+      length = 50;
+      lengthInput.value = length;
+    }
     generatePassword(length);
   } else if (type === "passphrase") {
     if (length < 3) {
       length = 3;
+      lengthInput.value = length;
+    }
+    if (length > 20) {
+      length = 20;
       lengthInput.value = length;
     }
     generatePassphrase(length);
