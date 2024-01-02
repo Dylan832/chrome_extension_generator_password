@@ -1,3 +1,12 @@
+* {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* color: #cc0000; */
+}
+
 html {
   width: 375px !important;
   /* height: 600px !important; */
@@ -41,6 +50,8 @@ body {
   word-break: break-all;
   padding: 15px;
   border-radius: 6px;
+  font-weight: bold;
+  cursor: text;
 }
 .action-buttons {
   display: flex;
@@ -84,6 +95,24 @@ body {
   display: block;
 }
 
+.error-popup {
+  display: none;
+  background-color: #ff6961;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-popup.show {
+  display: block;
+}
+
 .password-numbers {
   color: blue;
 }
@@ -105,7 +134,7 @@ body {
   word-break: break-all;
   position: relative;
   z-index: 1;
-  
+
   border-radius: 6px;
 
   background-color: #f0f0f0;
