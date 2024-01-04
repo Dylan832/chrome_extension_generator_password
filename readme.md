@@ -17,3 +17,19 @@ sur GitHub ou directement via ce
 
 2. Ouvrez votre navigateur Chrome et activez le mode développeur.
 3. Sélectionnez l'option "Charger l'extension non empaquetée" et choisissez le dossier contenant l'extension téléchargée.
+
+## Structure du projet
+
+```
+.
+├── .gitignore
+├── manifest.json
+├── readme.md
+├── images/
+│   └── icon-128.png
+└── popup/
+    ├── popup.css
+    ├── popup.html
+    ├── popup.js
+    └── words.json
+```
