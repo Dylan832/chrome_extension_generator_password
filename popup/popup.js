@@ -1,5 +1,3 @@
-// ! FAIRE UN DISPLAY NONE SUR LES DIV PLUTOT QUE LES INPUTS
-
 // Sélection des éléments du DOM
 const lengthInput = document.getElementById("length");
 const passwordInput = document.getElementById("password");
@@ -29,9 +27,9 @@ function checkAllUnchecked() {
 }
 
 // Ajout des écouteurs d'événements
-lettersCheckbox.addEventListener("change", checkAllUnchecked);
-numbersCheckbox.addEventListener("change", checkAllUnchecked);
-specialsCheckbox.addEventListener("change", checkAllUnchecked);
+// lettersCheckbox.addEventListener("change", checkAllUnchecked);
+// numbersCheckbox.addEventListener("change", checkAllUnchecked);
+// specialsCheckbox.addEventListener("change", checkAllUnchecked);
 
 // Fonction pour générer un mot de passe
 function generatePassword(length) {
@@ -70,7 +68,7 @@ function generatePassword(length) {
   for (let i = password.length; i < length; ++i) {
     password += charset.charAt(Math.floor(Math.random() * charset.length));
   }
-
+  console.log(password);
   // Mélangez le mot de passe pour que les chiffres et les caractères spéciaux ne soient pas tous au début
   password = password
     .split("")
