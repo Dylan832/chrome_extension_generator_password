@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./popup.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-  </head>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./popup.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Extension</title>
+</head>
 
-  <body>
-    <header>
-      <h1 class="title">Générateur de mots de passe</h1>
-    </header>
+<body>
+<header>
+    <h1 class="title">Générateur de mots de passe</h1>
+</header>
 
-    <main class="container">
-      <div class="generated-block">
+<main class="container">
+    <div class="generated-block">
         <div id="generated-wrapper"></div>
         <div class="action-buttons">
-          <button type="button" id="generator" class="btn">
-            <i class="fas fa-sync"></i>
-          </button>
-          <button type="button" id="copy" class="btn">
-            <i class="fas fa-copy"></i>
-          </button>
+            <button type="button" id="generator" class="btn">
+                <i class="fas fa-sync"></i>
+            </button>
+            <button type="button" id="copy" class="btn">
+                <i class="fas fa-copy"></i>
+            </button>
         </div>
-      </div>
+    </div>
 
-      <!-- <input type="text" id="password" class="password" readonly /> -->
+    <!-- <input type="text" id="password" class="password" readonly /> -->
 
-      <div class="type-block">
+    <div class="type-block">
         <div>
-          <input
-            type="radio"
-            id="passwordType"
-            name="type"
-            value="password"
-            checked
-          />
-          <label for="passwordType">Mot de passe</label>
+            <input type="radio" id="passwordType" name="type" value="password" checked/>
+            <label for="passwordType">Mot de passe</label>
         </div>
         <div>
-          <input
-            type="radio"
-            id="passphraseType"
-            name="type"
-            value="passphrase"
-          />
-          <label for="passphraseType">Phrase de passe</label>
+            <input type="radio" id="passphraseType" name="type" value="passphrase"/>
+            <label for="passphraseType">Phrase de passe</label>
         </div>
-      </div>
+    </div>
 
-      <div class="box-block">
+    <div class="box-block">
         <div class="box-content">
-          <label for="length">Longueur</label>
-          <input type="number" id="length" min="6" max="50" value="12" />
+            <label for="length">Longueur</label>
+            <input type="number" id="length" min="6" max="50" value="12"/>
         </div>
         <!-- <div class="box-content onlyPassword">
           <label for="letters">Lettres</label>
@@ -70,20 +57,20 @@
           <input type="checkbox" id="specials" checked />
         </div> -->
         <div class="box-content onlyPassword">
-          <label for="minNumbers">Min. chiffres :</label>
-          <input type="number" id="minNumbers" min="0" value="3" />
+            <label for="minNumbers">Min. chiffres :</label>
+            <input type="number" id="minNumbers" min="0" value="3"/>
         </div>
         <div class="box-content onlyPassword">
-          <label for="minSpecials">Min. caractères spéciaux :</label>
-          <input type="number" id="minSpecials" min="0" value="3" />
+            <label for="minSpecials">Min. caractères spéciaux :</label>
+            <input type="number" id="minSpecials" min="0" value="3"/>
         </div>
-      </div>
+    </div>
 
-      <div id="copiedPopup" class="copied-popup">Mot de passe copié</div>
-      <div id="errorPopup" class="error-popup">
+    <div id="copiedPopup" class="copied-popup">Mot de passe copié</div>
+    <div id="errorPopup" class="error-popup">
         Les minimums cumulés ne doivent pas excéder la longueur du mot de passe.
-      </div>
-    </main>
-    <script src="./popup.js"></script>
-  </body>
+    </div>
+</main>
+<script src="./popup.js"></script>
+</body>
 </html>
