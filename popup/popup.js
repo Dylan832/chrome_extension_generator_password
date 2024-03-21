@@ -1,12 +1,14 @@
 // Sélection des éléments du DOM
 const lengthInput = document.getElementById("length");
-const passwordInput = document.getElementById("password");
+// const passwordInput = document.getElementById("password");
 const copiedPopup = document.getElementById("copiedPopup");
 const errorPopup = document.getElementById("errorPopup");
 
+/*
 const lettersCheckbox = document.getElementById("letters");
 const numbersCheckbox = document.getElementById("numbers");
 const specialsCheckbox = document.getElementById("specials");
+*/
 
 const minNumbersInput = document.getElementById("minNumbers");
 const minSpecialsInput = document.getElementById("minSpecials");
@@ -17,7 +19,7 @@ const onlyPassword = document.getElementsByClassName("onlyPassword");
 generatePassword(lengthInput.value);
 
 // Function to check if all boxes are unchecked
-function checkAllUnchecked() {
+/*function checkAllUnchecked() {
     if (
         !lettersCheckbox.checked &&
         !numbersCheckbox.checked &&
@@ -25,7 +27,7 @@ function checkAllUnchecked() {
     ) {
         lettersCheckbox.checked = true;
     }
-}
+}*/
 
 // Adding event listeners
 // lettersCheckbox.addEventListener("change", checkAllUnchecked);
@@ -126,7 +128,7 @@ document.getElementById("passwordType").addEventListener("change", function () {
         lengthInput.min = 6;
         lengthInput.max = 50;
 
-        // Affichez les éléments "onlyPassword"
+        // Show "onlyPassword" elements
         for (let i = 0; i < onlyPassword.length; i++) {
             onlyPassword[i].style.display = "flex";
         }
